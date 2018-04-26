@@ -1,17 +1,109 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+      
+    <ion-title>IONICGRAM <ion-icon name="instagram"></ion-icon></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding> 
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/juan.jpeg">
+      </ion-avatar>
+      <h2>Juan Herrera</h2>
+      <p>Hace 3 minutos</p>
+    </ion-item>
+  
+    <img src="assets/imgs/angular_medellin.jpg">
+  
+    <ion-card-content>
+      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="likes()">
+          <ion-icon name="heart"></ion-icon>
+          <div>12 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="commentPhoto('juan')">
+          <ion-icon name="text"></ion-icon>
+          <div>{{commentsJuan}} Comments</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+          <button ion-button icon-left clear small (click)="download()">
+            <ion-icon name="download"></ion-icon>
+            <div>Download</div>
+          </button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+
+  <!-- SEGUNDO PERFIL -->
+
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/real-madrid.png">
+      </ion-avatar>
+      <h2>Real Madrid CF</h2>
+      <p>Hace 3 minutos</p>
+    </ion-item>
+  
+    <ion-slides pager>
+
+      <ion-slide>
+        <img src="assets/imgs/bayern1.jpg">
+      </ion-slide>
+    
+      <ion-slide >
+        <img src="assets/imgs/bayern2.jpg">
+      </ion-slide>
+    
+      <ion-slide >
+        <img src="assets/imgs/bayern3.jpg">
+      </ion-slide>
+    
+    </ion-slides>
+  
+    <ion-card-content>
+      <p>💫👊 Bayern Munich vs Real Madrid
+        All set for the big match!
+        ¡Listos para el gran partido!
+        #APorLa13 | #HalaMadrid</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="likes()">
+          <ion-icon name="heart"></ion-icon>
+          <div>123.235 Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small (click)="commentPhoto()">
+          <ion-icon name="text"></ion-icon>
+          <div>{{commentsBayern}} Comments</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <button ion-button icon-left clear small (click)="download()">
+          <ion-icon name="download"></ion-icon>
+          <div>Download</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+
+
+
+
 </ion-content>
